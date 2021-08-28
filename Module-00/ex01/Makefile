@@ -1,8 +1,8 @@
-NAME	= megaphone
+NAME 	= phonebook
 
 FLAGS	= -g -Wall -Werror -Wextra
 
-SRCS	= megaphone.cpp
+SRCS	= main.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 
