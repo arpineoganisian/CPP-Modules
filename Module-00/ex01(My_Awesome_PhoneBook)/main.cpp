@@ -20,7 +20,8 @@ int main() {
 		if (command.compare("EXIT") == 0) {
 			return 0;
 		} else if (command.compare("ADD") == 0) {
-			std::cout << "ADDING" << std::endl;
+//			std::cout << "ADDING" << std::endl;
+			phonebook.addContact();
 		} else if (command.compare("SEARCH") == 0) {
 			std::cout << "SEARCHING" << std::endl;
 		}
