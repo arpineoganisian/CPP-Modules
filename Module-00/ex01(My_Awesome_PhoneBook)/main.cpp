@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Phonebook.hpp"
+#include "Phonebook.h"
 
 void print_prompt() {
 	std::cout << "Enter ADD to add new contact,\n"
@@ -14,16 +14,17 @@ int main() {
 	Phonebook phonebook;
 
 	std::cout << "\033[34mWelcome to Awesome PhoneBook!" << std::endl;
-	while (1) {
+	while (true) {
 		print_prompt();
 		std::cin >> command;
 		if (command.compare("EXIT") == 0) {
 			return 0;
 		} else if (command.compare("ADD") == 0) {
-//			std::cout << "ADDING" << std::endl;
 			phonebook.addContact();
 		} else if (command.compare("SEARCH") == 0) {
-			std::cout << "SEARCHING" << std::endl;
+			phonebook.searchContact();
+		} else {
+			std::cout << "No such command" << std::endl;
 		}
 	}
 }

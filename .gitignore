@@ -3,4 +3,8 @@ cmake-build-debug/
 CMakeLists.txt
 .idea/
 *.o
+file.txt
+test.cpp
+a.out
 megaphone
+phonebook

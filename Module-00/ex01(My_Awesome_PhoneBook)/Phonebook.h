@@ -1,18 +1,19 @@
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#ifndef PHONEBOOK_H
+#define PHONEBOOK_H
 
 #include <iostream>
-#include "Contact.hpp"
+#include "Contact.h"
 
 class Phonebook {
+
 private:
 	Contact contact[8];
 	short orderNumber;
-	void promptToNewField(std::string field);
+	void displayAllContacts();
 
 public:
 	Phonebook();
 	void addContact();
+	void searchContact();
 };
-
-#endif
+#endif //PHONEBOOK_H

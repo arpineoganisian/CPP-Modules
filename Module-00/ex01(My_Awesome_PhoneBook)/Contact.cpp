@@ -1,7 +1,8 @@
 #include <string>
-#include "Contact.hpp"
+#include "Contact.h"
 
 Contact::Contact() {
+	this->index = 0;
 }
 
 void Contact::setIndex(short index) {
@@ -28,5 +29,26 @@ void Contact::setDarkestSecret(const std::string &darkestSecret) {
 	Contact::darkestSecret = darkestSecret;
 }
 
+short Contact::getIndex() const {
+	return index;
+}
 
+const std::string &Contact::getFirstName() const {
+	return firstName;
+}
+
+const std::string &Contact::getLastName() const {
+	return lastName;
+}
+
+const std::string &Contact::getNickname() const {
+	return nickname;
+}
+
+const std::string &Contact::getPhoneNumber() const {
+	return phoneNumber;
+}
+
+const std::string &Contact::getDarkestSecret() const {
+	return darkestSecret;
 }
