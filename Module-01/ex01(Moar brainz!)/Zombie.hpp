@@ -5,15 +5,17 @@
 #include <string>
 
 class Zombie;
-void randomChump(std::string name);
-Zombie* newZombie(std::string name);
+Zombie* zombieHorde(int N, std::string name);
 
 class Zombie {
 private:
 	std::string name;
+
 public:
+	Zombie();
 	Zombie(const std::string &name);
 	void announce();
+	void setName(const std::string &name);
 	virtual ~Zombie();
 };
 

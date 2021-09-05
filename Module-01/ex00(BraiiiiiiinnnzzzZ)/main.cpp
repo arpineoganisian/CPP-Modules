@@ -8,6 +8,5 @@ int main() {
 	zombie->announce();
 	delete zombie;
 
-
 	return 0;
 }
