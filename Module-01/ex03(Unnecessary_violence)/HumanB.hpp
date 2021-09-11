@@ -9,8 +9,8 @@ private:
 	std::string name;
 public:
 	HumanB(const std::string &name);
-	void setWeapon(Weapon &weapon);
 	void attack();
+	void setWeapon(Weapon &weapon);
 	virtual ~HumanB();
 };
 
