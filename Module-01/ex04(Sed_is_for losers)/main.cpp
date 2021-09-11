@@ -1,11 +1,8 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <fstream>
 #include <stdlib.h>
-//#include <sys/types.h>
 #include <sys/stat.h>
-
 
 void exitWithError(std::string error) {
 	std::cout << error << std::endl;
@@ -29,7 +26,6 @@ int main(int argc, char *argv[]) {
 		if (s1.empty() || s2.empty()) {
 			exitWithError("s1 and s2 cannot be empty");
 		}
-
 		std::ifstream in(filename);
 		if (!in) {
 			exitWithError(filename + ": File cannot be opened for reading");
@@ -37,7 +33,6 @@ int main(int argc, char *argv[]) {
 		if (isDirectory(argv[1])) {
 			exitWithError(filename + " is a directory");
 		}
-
 		std::ofstream out( filename + ".replace", std::ios::trunc);
 		if (!out) {
 			exitWithError(filename + ".replace: File cannot be opened for writing");
@@ -45,11 +40,9 @@ int main(int argc, char *argv[]) {
 
 		int s1Length(s1.length());
 		int s2Length(s2.length());
-
 		while(in) {
 			std::string line;
 			getline(in, line);
-
 			unsigned long pos(line.find(s1));
 			while (pos != std::string::npos) {
 				line.erase(pos, s1Length);
