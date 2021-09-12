@@ -17,24 +17,12 @@ int main(int argc, char *argv[]) {
 			case 0:
 				karen.complain("DEBUG");
 				std::cout << std::endl;
-				karen.complain("INFO");
-				std::cout << std::endl;
-				karen.complain("WARNING");
-				std::cout << std::endl;
-				karen.complain("ERROR");
-				break;
 			case 1:
 				karen.complain("INFO");
 				std::cout << std::endl;
-				karen.complain("WARNING");
-				std::cout << std::endl;
-				karen.complain("ERROR");
-				break;
 			case 2:
 				karen.complain("WARNING");
 				std::cout << std::endl;
-				karen.complain("ERROR");
-				break;
 			case 3:
 				karen.complain("ERROR");
 				break;
