@@ -1,7 +1,6 @@
 #ifndef KAREN_H
 #define KAREN_H
 
-
 #include <string>
 #include <iostream>
 
@@ -16,6 +15,5 @@ public:
 	void complain(std::string level);
 	virtual ~Karen();
 };
-
 
 #endif //KAREN_H
