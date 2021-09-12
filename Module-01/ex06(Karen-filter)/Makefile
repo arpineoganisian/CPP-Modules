@@ -1,4 +1,4 @@
-NAME 	= karen_2.0
+NAME 	= karenFilter
 
 FLAGS	= -g -Wall -Werror -Wextra
 
