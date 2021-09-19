@@ -5,24 +5,15 @@
 
 class Fixed {
 private:
-	int fixedPoint;
-	static const int fractionalBits = 8;
+	int rawBits;
+	static const int numberOfBits = 8;
 public:
-	//default constructor
 	Fixed();
-
-	//copy constructor
 	Fixed(const Fixed &fixed);
-
-
-	//Константный метод — это метод, который гарантирует, что не будет изменять
-	//объект или вызывать неконстантные методы класса (поскольку они могут изменить объект).
+	Fixed& operator= (const Fixed &fixed);
 	int getRawBits(void) const;
 	void setRawBits(int const raw);
-
-	//destructor
 	virtual ~Fixed();
-
 };
 
 #endif //FIXED_HPP
