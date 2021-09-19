@@ -1,4 +1,4 @@
-NAME 	= my_first_orthodox_class
+NAME 	= towards_a_more_useful_fixed_point_class
 
 FLAGS	= -g -Wall -Werror -Wextra
 
