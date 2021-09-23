@@ -21,6 +21,6 @@ public:
 	virtual ~Fixed();
 };
 
-std::ostream& operator<< (std::ostream out, const Fixed &fixed);
+std::ostream& operator<< (std::ostream &out, const Fixed &fixed);
 
 #endif //FIXED_HPP
