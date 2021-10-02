@@ -2,7 +2,7 @@ NAME 	= aaaaand..._open
 
 FLAGS	= -g -Wall -Werror -Wextra
 
-SRCS	= main.cpp
+SRCS	= main.cpp ClapTrap.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 

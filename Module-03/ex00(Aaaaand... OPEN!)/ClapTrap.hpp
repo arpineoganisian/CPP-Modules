@@ -20,9 +20,16 @@ public:
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 
+	void setAttackDamage(int attackDamage);
+
 	const std::string &getName() const;
+	int getHitpoints() const;
+	int getEnergyPoints() const;
+	int getAttackDamage() const;
 
 	~ClapTrap();
 };
 
-#endif CLAPTRAP_HPP
+std::ostream& operator<< (std::ostream &out, const ClapTrap &clapTrap);
+
+#endif //CLAPTRAP_HPP
