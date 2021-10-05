@@ -1,5 +1,5 @@
-#ifndef EX01_SERENA__MY_LOVE___SCAVTRAP_HPP
-#define EX01_SERENA__MY_LOVE___SCAVTRAP_HPP
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
 #include "ClapTrap.hpp"
 
@@ -10,7 +10,7 @@ public:
 	ScavTrap(const ScavTrap &scavTrap);
 	ScavTrap& operator=(const ScavTrap &scavTrap);
 
-	void guardGate();
+	void guardGate(void);
 
 	virtual ~ScavTrap();
 };

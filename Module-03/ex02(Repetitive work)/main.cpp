@@ -1,9 +1,10 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main() {
-	ScavTrap one("ONE");
-	ScavTrap two("TWO");
+	FragTrap one("ONE");
+	FragTrap two("TWO");
 
 	std::cout << one << std::endl;
 	std::cout << two << std::endl;
@@ -17,5 +18,5 @@ int main() {
 	std::cout << two << std::endl;
 	std::cout << std::endl;
 
-	one.guardGate();
+	one.highFivesGuys();
 }

@@ -1,8 +1,8 @@
-NAME 	= serena,_my_love!
+NAME 	= repetitive_work
 
 FLAGS	= -g -Wall -Werror -Wextra
 
-SRCS	= ScavTrap.cpp ClapTrap.cpp main.cpp
+SRCS	= ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 
