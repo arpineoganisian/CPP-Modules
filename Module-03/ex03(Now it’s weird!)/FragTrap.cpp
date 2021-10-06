@@ -1,7 +1,9 @@
 #include "FragTrap.hpp"
 
+FragTrap::FragTrap() {}
+
 FragTrap::FragTrap(std::string name) : ClapTrap(name) {
-	std::cout << "ScavTrap \"" << this->name << "\" is created" << std::endl;
+	std::cout << "FragTrap \"" << this->name << "\" is created" << std::endl;
 	this->hitpoints = 100;
 	this->energyPoints = 100;
 	this->attackDamage = 30;

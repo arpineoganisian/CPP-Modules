@@ -16,9 +16,9 @@ FragTrap& FragTrap::operator=(const FragTrap &fragTrap) {
 		return *this;
 	}
 	if (this->name.empty()) {
-		std::cout << "Copy of ScavTrap \"" << fragTrap.name << "\" is created" << std::endl;
+		std::cout << "Copy of FragTrap \"" << fragTrap.name << "\" is created" << std::endl;
 	} else {
-		std::cout << "ScavTrap \"" << this->name
+		std::cout << "FragTrap \"" << this->name
 		<< "\" is a copy of \"" << fragTrap.name << "\" now" << std::endl;
 	}
 	this->name = fragTrap.name;

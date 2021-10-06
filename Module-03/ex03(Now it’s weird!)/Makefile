@@ -1,8 +1,8 @@
 NAME 	= now_its_weird!
 
-FLAGS	= -g -Wall -Werror -Wextra
+FLAGS	= -g -Wall -Werror -Wextra -Wshadow -Wno-shadow
 
-SRCS	= ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
+SRCS	=  main.cpp DiamondTrap.cpp FragTrap.cpp ScavTrap.cpp ClapTrap.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 

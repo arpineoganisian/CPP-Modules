@@ -1,8 +1,9 @@
 #ifndef DIAMONDTRAP_HPP
 #define DIAMONDTRAP_HPP
 
-#include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
 class DiamondTrap : public FragTrap, public ScavTrap {
 private:
@@ -13,9 +14,12 @@ public:
 	DiamondTrap(std::string name);
 	DiamondTrap(const DiamondTrap &diamondTrap);
 	DiamondTrap& operator=(const DiamondTrap &diamondTrap);
+
+	void attack(std::string const &target);
+
+	void whoAmI();
+
 	virtual ~DiamondTrap();
-
-
 };
 
 #endif //DIAMONDTRAP_HPP

@@ -1,5 +1,7 @@
 #include "ScavTrap.hpp"
 
+ScavTrap::ScavTrap() {}
+
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 	std::cout << "ScavTrap \"" << this->name << "\" is created" << std::endl;
 	this->hitpoints = 100;
