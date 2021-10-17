@@ -2,7 +2,7 @@
 
 Animal::Animal(std::string type) {
 	this->type = type;
-	std::cout << "Animal constructor with default parameter" << std::endl;
+	std::cout << BRIGHTYELLOW << "Animal constructor" << RESETCOLOR << std::endl;
 }
 
 Animal::Animal(const Animal &animal) {
@@ -17,7 +17,7 @@ Animal &Animal::operator=(const Animal &animal) {
 }
 
 Animal::~Animal() {
-	std::cout << "Animal destructor" << std::endl;
+	std::cout << BRIGHTYELLOW <<  "Animal destructor" << RESETCOLOR << std::endl;
 }
 
 const std::string &Animal::getType() const {
@@ -25,7 +25,5 @@ const std::string &Animal::getType() const {
 }
 
 void Animal::makeSound() const {
-	HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | BACKGROUND_BLUE | BACKGROUND_GREEN | BACKGROUND_RED);
-	std::cout << "Animal makeSound function" << std::endl;
+	std::cout << BRIGHTYELLOW << "Animal makeSound method" << RESETCOLOR << std::endl;
 }

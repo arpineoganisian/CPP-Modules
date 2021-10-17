@@ -3,12 +3,13 @@
 
 
 #include <iostream>
+#include "AnsiColors.hpp"
 
 class Animal {
 protected:
 	std::string type;
 public:
-	Animal(std::string type = "");
+	Animal(std::string type = "Animal");
 	Animal(const Animal &animal);
 	Animal& operator=(const Animal &animal);
 	virtual ~Animal();
