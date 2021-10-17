@@ -7,7 +7,7 @@ Cat::Cat() : Animal("Cat"){
 
 Cat::Cat(const Cat &cat) {
 	std::cout << GREEN << "Cat copy constructor" << RESETCOLOR << std::endl;
-	*this = cat;
+	this->brain = new Brain(*cat.brain);
 }
 
 Cat Cat::operator=(const Cat &cat) {
@@ -19,6 +19,7 @@ Cat Cat::operator=(const Cat &cat) {
 		if (cat.brain) {
 			this->brain = new Brain(*cat.brain);
 		}
+		this->type = cat.type;
 	}
 	return *this;
 }
@@ -26,6 +27,10 @@ Cat Cat::operator=(const Cat &cat) {
 Cat::~Cat() {
 	std::cout << GREEN << "Cat destructor" << RESETCOLOR << std::endl;
 	delete this->brain;
+}
+
+Brain *Cat::getBrain() const {
+	return brain;
 }
 
 void Cat::makeSound() const {

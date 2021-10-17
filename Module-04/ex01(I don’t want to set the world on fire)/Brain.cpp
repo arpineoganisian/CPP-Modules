@@ -25,10 +25,10 @@ Brain::~Brain() {
 	std::cout << MAGENTA << "Brain destructor" << RESETCOLOR << std::endl;
 }
 
-void Brain::setVeryFirstIdea(std::string idea) {
-	this->ideas[0] = idea;
+void Brain::setIdea(int i, std::string idea) {
+	this->ideas[i] = idea;
 }
 
-std::string Brain::getVeryFirstIdea() {
-	return this->ideas[0];
+std::string Brain::getIdea(int i) {
+	return this->ideas[i];
 }

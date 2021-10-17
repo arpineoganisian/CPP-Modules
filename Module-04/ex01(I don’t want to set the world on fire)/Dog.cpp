@@ -22,8 +22,6 @@ Dog Dog::operator=(const Dog &dog) {
 			this->brain = new Brain(*dog.brain);
 		}
 		this->type = dog.type;
-		std::cout << &this->brain << std::endl;
-		std::cout << &dog.brain << std::endl;
 	}
 	return *this;
 }
@@ -33,10 +31,10 @@ Dog::~Dog() {
 	delete this->brain;
 }
 
-void Dog::makeSound() const {
-	std::cout << BLUE << "Woof!" << RESETCOLOR << std::endl;
-}
-
 Brain *Dog::getBrain() const {
 	return brain;
+}
+
+void Dog::makeSound() const {
+	std::cout << BLUE << "Woof!" << RESETCOLOR << std::endl;
 }

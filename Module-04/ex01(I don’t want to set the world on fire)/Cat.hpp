@@ -14,6 +14,8 @@ public:
 	Cat operator=(const Cat &cat);
 	virtual ~Cat();
 
+	Brain *getBrain() const;
+
 	void makeSound() const;
 };
 

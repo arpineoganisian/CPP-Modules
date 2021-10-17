@@ -15,8 +15,8 @@ public:
 	Brain operator=(const Brain &brain);
 	virtual ~Brain();
 
-	void setVeryFirstIdea(std::string idea);
-	std::string getVeryFirstIdea();
+	void setIdea(int i, std::string idea);
+	std::string getIdea(int i);
 };
 
 
