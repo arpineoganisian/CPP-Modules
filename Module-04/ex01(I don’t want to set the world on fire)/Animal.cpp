@@ -2,7 +2,7 @@
 
 Animal::Animal(std::string type) {
 	this->type = type;
-	std::cout << BRIGHTYELLOW << "Animal constructor" << RESETCOLOR << std::endl;
+	std::cout << BRIGHTYELLOW << "Animal constructor " << this  << RESETCOLOR << std::endl;
 }
 
 Animal::Animal(const Animal &animal) {
@@ -19,7 +19,7 @@ Animal &Animal::operator=(const Animal &animal) {
 }
 
 Animal::~Animal() {
-	std::cout << BRIGHTYELLOW <<  "Animal destructor" << RESETCOLOR << std::endl;
+	std::cout << BRIGHTYELLOW <<  "Animal destructor " << this << RESETCOLOR << std::endl;
 }
 
 const std::string &Animal::getType() const {

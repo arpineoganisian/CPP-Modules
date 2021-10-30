@@ -1,7 +1,7 @@
 #include "Brain.hpp"
 
 Brain::Brain() {
-	std::cout << MAGENTA << "Brain constructor " << RESETCOLOR << std::endl;
+	std::cout << MAGENTA << "Brain constructor " << this << RESETCOLOR << std::endl;
 }
 
 Brain::Brain(const Brain &brain) {
@@ -22,7 +22,7 @@ Brain Brain::operator=(const Brain &brain) {
 }
 
 Brain::~Brain() {
-	std::cout << MAGENTA << "Brain destructor" << RESETCOLOR << std::endl;
+	std::cout << MAGENTA << "Brain destructor " << this  << RESETCOLOR << std::endl;
 }
 
 void Brain::setIdea(int i, std::string idea) {

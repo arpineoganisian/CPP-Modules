@@ -1,7 +1,7 @@
 #include "Cat.hpp"
 
 Cat::Cat() : Animal("Cat"){
-	std::cout << GREEN << "Cat constructor" << RESETCOLOR << std::endl;
+	std::cout << GREEN << "Cat constructor "  << this << RESETCOLOR << std::endl;
 	this->brain = new Brain;
 }
 
@@ -25,7 +25,7 @@ Cat Cat::operator=(const Cat &cat) {
 }
 
 Cat::~Cat() {
-	std::cout << GREEN << "Cat destructor" << RESETCOLOR << std::endl;
+	std::cout << GREEN << "Cat destructor "  << this << RESETCOLOR << std::endl;
 	delete this->brain;
 }
 

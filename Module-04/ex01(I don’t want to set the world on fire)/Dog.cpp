@@ -1,7 +1,7 @@
 #include "Dog.hpp"
 
 Dog::Dog() : Animal("Dog"){
-	std::cout << BLUE << "Dog constructor"<< RESETCOLOR << std::endl;
+	std::cout << BLUE << "Dog constructor " << this << RESETCOLOR << std::endl;
 	this->brain = new Brain();
 }
 
@@ -27,7 +27,7 @@ Dog Dog::operator=(const Dog &dog) {
 }
 
 Dog::~Dog() {
-	std::cout << BLUE << "Dog destructor" << RESETCOLOR << std::endl;
+	std::cout << BLUE << "Dog destructor " << this << RESETCOLOR << std::endl;
 	delete this->brain;
 }
 
