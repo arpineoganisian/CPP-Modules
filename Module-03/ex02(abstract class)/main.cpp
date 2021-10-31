@@ -44,5 +44,6 @@ int main() {
 	std::cout << cat2->getBrain()->getIdea(50) << std::endl;
 	delete cat1;
 	delete cat2;
+
 	return 0;
 }
