@@ -1,6 +1,7 @@
-#ifndef EX03_INTERFACE___RECAP__IMATERIASOURCE_HPP
-#define EX03_INTERFACE___RECAP__IMATERIASOURCE_HPP
+#ifndef IMATERIASOURCE_HPP
+#define IMATERIASOURCE_HPP
 
+#include "AMateria.hpp"
 
 class IMateriaSource {
 public:
@@ -9,5 +10,4 @@ public:
 	virtual AMateria* createMateria(std::string const & type) = 0;
 };
 
-
-#endif //EX03_INTERFACE___RECAP__IMATERIASOURCE_HPP
+#endif //IMATERIASOURCE_HPP

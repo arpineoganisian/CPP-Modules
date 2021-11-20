@@ -1,8 +1,11 @@
 NAME 	= interface_and_recap
 
-FLAGS	= -g -Wall -Werror -Wextra
+FLAGS	= -g -Wall -Werror -Wextra -std=c++98
 
-SRCS	= *.cpp
+SRCS	= Character.cpp \
+		AMateria.cpp Cure.cpp Ice.cpp \
+		IMateriaSource.cpp \
+		main.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 
@@ -11,9 +14,9 @@ RM		= rm -rf
 all: $(NAME)
 
 $(NAME): $(OBJS)
-			clang++ $(FLAGS) -o $(NAME) $(OBJS)
+			c++ $(FLAGS) -o $(NAME) $(OBJS)
 .cpp.o:
-			clang++ $(FLAGS) -c $< -o $@
+			c++ $(FLAGS) -c $< -o $@
 clean:
 		$(RM) $(OBJS) a.out
 

@@ -14,5 +14,4 @@ public:
 	void use(ICharacter &target) override;
 };
 
-
-#endif CURE_HPP
+#endif //CURE_HPP

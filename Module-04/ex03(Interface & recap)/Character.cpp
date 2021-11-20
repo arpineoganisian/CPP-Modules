@@ -1,7 +1,7 @@
 #include "Character.hpp"
 
 const std::string &Character::getName() const {
-	return <#initializer#>;
+	return this->name;
 }
 
 void Character::equip(AMateria *m) {
