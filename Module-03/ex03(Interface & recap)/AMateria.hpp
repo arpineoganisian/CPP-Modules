@@ -3,13 +3,14 @@
 
 
 #include <string>
+#include <iostream>
 #include "../character/ICharacter.hpp"
 
 class AMateria {
 protected:
 //	[...]
 public:
-	AMateria(std::string const & type);
+	AMateria(std::string const &type = "aMateria");
 	AMateria(const AMateria &aMateria);
 	AMateria& operator=(const AMateria &aMateria);
 	virtual ~AMateria();
@@ -20,4 +21,4 @@ public:
 };
 
 
-#endif AMATERIA_HPP
+#endif //AMATERIA_HPP
