@@ -8,14 +8,12 @@
 class ICharacter;
 class AMateria {
 protected:
-//	[...]
+	std::string type;
 public:
 	AMateria(std::string const &type = "aMateria");
-	AMateria(const AMateria &aMateria);
-	AMateria& operator=(const AMateria &aMateria);
 	virtual ~AMateria();
 
-	std::string const & getType() const; //Returns the materia type
+	std::string const & getType() const;
 	virtual AMateria* clone() const = 0;
 	virtual void use(ICharacter& target);
 };

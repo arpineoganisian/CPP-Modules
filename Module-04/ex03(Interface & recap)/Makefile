@@ -4,7 +4,6 @@ FLAGS	= -g -Wall -Werror -Wextra -std=c++98
 
 SRCS	= Character.cpp \
 		AMateria.cpp Cure.cpp Ice.cpp \
-		IMateriaSource.cpp \
 		main.cpp
 
 OBJS	= $(SRCS:.cpp=.o)

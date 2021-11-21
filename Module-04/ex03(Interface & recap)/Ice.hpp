@@ -10,8 +10,8 @@ public:
 	Ice& operator=(const Ice &Ice);
 	virtual ~Ice();
 
-	virtual Ice *clone() const override;
-	void use(ICharacter &target) override;
+	virtual Ice *clone() const;
+	void use(ICharacter &target);
 };
 
 

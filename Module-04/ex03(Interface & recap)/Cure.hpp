@@ -10,8 +10,8 @@ public:
 	Cure& operator=(const Cure &cure);
 	virtual ~Cure();
 
-	virtual Cure *clone() const override;
-	void use(ICharacter &target) override;
+	virtual Cure *clone() const;
+	void use(ICharacter &target);
 };
 
 #endif //CURE_HPP
