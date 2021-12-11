@@ -9,16 +9,13 @@ ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target) : Form(
 
 ShrubberyCreationForm::ShrubberyCreationForm(
 		const ShrubberyCreationForm &shrubberyCreationForm) : Form(
-				shrubberyCreationForm.getName(), 145, 137) {
-
-
-
+				shrubberyCreationForm.getName(), 145, 137, shrubberyCreationForm.getTarget()) {
 }
 
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(
 		const ShrubberyCreationForm &shrubberyCreationForm) {
 	if (this != &shrubberyCreationForm) {
-
+		this->target = shrubberyCreationForm.target;
 	}
 	return *this;
 }
@@ -27,21 +24,24 @@ ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
 void ShrubberyCreationForm::execute(const Bureaucrat &executor) const {
 	if (!(this->isSign()))
-		std::cout << this->getName() << " is not signed" << std::endl;
-	else if (executor.getGrade() > this->getExecuteGrade())
-		std::cout << executor << " can't execute " << this->getName() << std::endl;
-	else {
-		std::ofstream outf(this->getTarget() +".txt");
-		if (!outf) {
-			std::cerr << "File could not be opened for writing!" << std::endl;
-			return;
-		}
-		outf << "--------------------------------" << std::endl;
-		outf << "---######----------######-------" << std::endl;
-		outf << "---######----------######-------" << std::endl;
-		outf << "---######----------######-------" << std::endl;
-		outf << "-----||--------------||---------" << std::endl;
-		outf << "-----||--------------||---------" << std::endl;
-		outf << "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" << std::endl;
+		throw FormNotSignedException();
+	if (executor.getGrade() > this->getExecuteGrade()) {
+		throw GradeTooLowException();
 	}
+	std::ofstream outf(this->getTarget() +".txt");
+	if (!outf) {
+		std::cerr << "File could not be opened for writing!" << std::endl;
+		return;
+	}
+	outf << "     ccee88oo" << std::endl;
+	outf << "  C8O8O8Q8PoOb o8oo" << std::endl;
+	outf << " dOB69QO8PdUOpugoO9bD" << std::endl;
+	outf << "CgggbU8OU qOp qOdoUOdcb" << std::endl;
+	outf << "    6OuU  /p u gcoUodpP" << std::endl;
+	outf << "      \\\\\\//  /douUP" << std::endl;
+	outf << "        \\\\\\////" << std::endl;
+	outf << "         |||/\\" << std::endl;
+	outf << "         |||\\/" << std::endl;
+	outf << "         |||||" << std::endl;
+	outf << "   .....//||||\\...." << std::endl;
 }

@@ -5,7 +5,6 @@
 #ifndef FORM_HPP
 #define FORM_HPP
 
-
 #include <string>
 #include <iostream>
 #include "Bureaucrat.hpp"
@@ -19,10 +18,11 @@ private:
 	bool sign;
 	const int signGrade;
 	const int executeGrade;
+protected:
 	std::string target;
 public:
 	Form(const std::string &name, const int signGrade, const int executeGrade,
-		 std::string target = "");
+		 std::string target);
 	Form(const Form &form);
 	Form& operator=(const Form &form);
 	virtual ~Form();
@@ -42,6 +42,9 @@ public:
 	};
 	class GradeTooLowException : public std::exception {
 	public:
+		const char *what() const _NOEXCEPT;
+	};
+	class FormNotSignedException : public std::exception {
 		const char *what() const _NOEXCEPT;
 	};
 };
