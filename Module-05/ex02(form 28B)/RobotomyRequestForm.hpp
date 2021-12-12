@@ -6,6 +6,8 @@
 #define ROBOTOMYREQUESTFORM_HPP
 
 #include "Form.hpp"
+#include <ctime> // для функции time()
+
 
 class RobotomyRequestForm : public Form {
 private:
