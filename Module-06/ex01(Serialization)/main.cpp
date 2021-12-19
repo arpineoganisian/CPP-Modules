@@ -16,12 +16,14 @@ void someRandomLogicWithSerializedData(uintptr_t raw) {
 int main() {
 
 	Data data("Arpine");
-	std::cout << "before serialization: " << data.getName() << std::endl;
+	std::cout << "before serialization: " << data.getName() << " "
+			<< &data << std::endl;
 
 	uintptr_t uintptr = serialize(&data);
 	someRandomLogicWithSerializedData(uintptr);
 	Data *serialized = deserialize(uintptr);
-	std::cout << "after serialization: " << serialized->getName() << std::endl;
+	std::cout << "after serialization: " << serialized->getName() << "  "
+		<< serialized << std::endl;
 
 	return 0;
 }
