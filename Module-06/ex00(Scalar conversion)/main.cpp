@@ -21,6 +21,10 @@ void printInt(double value) {
 }
 
 void printFloat(double value) {
+	if (fabs(value) != INFINITY && (value < -MAXFLOAT || value > MAXFLOAT)) {
+		std::cout << "impossible";
+		return;
+	}
 	std::cout << static_cast<float>(value);
 	if (value == static_cast<int>(value)) {
 		std::cout << ".0";
@@ -29,7 +33,7 @@ void printFloat(double value) {
 }
 
 void printDouble(double value) {
-	std::cout << static_cast<float>(value);
+	std::cout << value;
 	if (value == static_cast<int>(value)) {
 		std::cout << ".0";
 	}
@@ -42,7 +46,12 @@ int main(int argc, char *argv[]) {
 		return (0);
 	}
 
-	double d = strtod(argv[1], NULL);
+	char *end_ptr;
+	double d = strtod(argv[1], &end_ptr);
+	if (argv[1] == end_ptr) {
+		std::cerr << "hehehe" << std::endl;
+		return (0);
+	}
 	if (errno == ERANGE) {
 		std::cerr << "Value is out of range!" << std::endl;
 		return (0);
