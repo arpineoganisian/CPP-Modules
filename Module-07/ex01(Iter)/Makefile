@@ -1,4 +1,4 @@
-NAME 	= few_functions
+NAME 	= iter
 
 FLAGS	= -g -Wall -Werror -Wextra -std=c++98
 
