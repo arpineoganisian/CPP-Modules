@@ -14,3 +14,7 @@ Learning C++
 **Day 05** - Nested classes, Exceptions
 
 **Day 06** - Upcast and downcast, Static cast, Dynamic cast, Reinterpret cast, Const cast, Cast operators, Explicit keyword
+
+**Day 07** - Templates, Default type, Specialization
+
+**Day 08** - STL
