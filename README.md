@@ -1,20 +1,20 @@
 # CPP-Modules
 Learning C++
 
-**Day 00** - Namespaces, Stdio streams, Class and instance, Member attributes and member function, This, Initialization list, Const, Visibility, Class vs Struct, Accessors, Comparisons, Non member attributes and non member function, Pointers to members
+**Module 00** - Namespaces, Stdio streams, Class and instance, Member attributes and member function, This, Initialization list, Const, Visibility, Class vs Struct, Accessors, Comparisons, Non member attributes and non member function, Pointers to members
 
-**Day 01** - New and delete, References, Filestream
+**Module 01** - New and delete, References, Filestream
 
-**Day 02** - Ad-hoc polymorphism, Operator overload, Canonical form
+**Module 02** - Ad-hoc polymorphism, Operator overload, Canonical form
 
-**Day 03** - Inheritance
+**Module 03** - Inheritance
 
-**Day 04** - Sub-typing polymorphism, Abstract classes and interfaces
+**Module 04** - Sub-typing polymorphism, Abstract classes and interfaces
 
-**Day 05** - Nested classes, Exceptions
+**Module 05** - Nested classes, Exceptions
 
-**Day 06** - Upcast and downcast, Static cast, Dynamic cast, Reinterpret cast, Const cast, Cast operators, Explicit keyword
+**Module 06** - Upcast and downcast, Static cast, Dynamic cast, Reinterpret cast, Const cast, Cast operators, Explicit keyword
 
-**Day 07** - Templates, Default type, Specialization
+**Module 07** - Templates, Default type, Specialization
 
-**Day 08** - STL
+**Module 08** - STL
