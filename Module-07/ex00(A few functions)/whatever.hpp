@@ -2,8 +2,8 @@
 // Created by Herminia Woodwright on 12/26/21.
 //
 
-#ifndef EX00_A_FEW_FUNCTIONS__WHATEVER_HPP
-#define EX00_A_FEW_FUNCTIONS__WHATEVER_HPP
+#ifndef WHATEVER_HPP
+#define WHATEVER_HPP
 
 
 template <typename T>
@@ -26,4 +26,4 @@ T min(T t1, T t2) {
 }
 
 
-#endif //EX00_A_FEW_FUNCTIONS__WHATEVER_HPP
+#endif //WHATEVER_HPP
