@@ -8,13 +8,16 @@
 
 template<typename T>
 typename T::iterator easyfind(T &t, int x) {
-    typename T::iterator it = t.begin();
-    while (it != t.end()) {
-        if (*it == x)
-            return it;
-        it++;
+    typename T::iterator b = t.begin();
+    typename T::iterator e = t.end();
+
+    typename T::iterator found = std::find(b, e, x);
+
+    if (*found == 0 && *b == *e) {
+        throw std::runtime_error("Element is not found");
     }
-    throw std::runtime_error("Element is not found");
+
+    return found;
 }
 
 

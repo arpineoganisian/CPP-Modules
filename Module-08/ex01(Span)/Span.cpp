@@ -2,36 +2,41 @@
 // Created by arpine on 16.01.2022.
 //
 
-#include "span.hpp"
+#include "Span.hpp"
 
-span::span() {}
+Span::Span() {}
 
-span::span(unsigned int n) : n(n) {}
+Span::Span(unsigned int n) : n(n) {}
 
-span::span(const span &span) {
+Span::Span(const Span &span) {
     (void)span;
 }
 
-span &span::operator=(const span &span) {
+Span &Span::operator=(const Span &span) {
     (void)span;
     return *this;
 }
 
-span::~span() {}
+Span::~Span() {}
 
-void span::addNumber(unsigned int elem) {
+void Span::addNumber(unsigned int elem) {
     if (this->v.size() == this->n)
         throw std::runtime_error("Error: Maximum amount of elements is already reached");
     this->v.push_back(elem);
 }
 
-void checkVector(const std::vector<int> &v) {
-    if (v.empty() || v.size() == 1)
-        throw std::runtime_error("There is no spin to find");
+void Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end) {
+    if (this->v.size() + (end - begin) > this->n)
+        throw std::runtime_error("Error: Maximum amount of elements is already reached");
+    this->v.insert(this->v.end(), begin, end);
 }
 
-int span::shortestSpan() {
+int Span::shortestSpan() {
+    if (v.empty() || v.size() == 1)
+        throw std::runtime_error("There is no spin to find");
+
     std::vector<int> v2(this->v);
+    std::sort(v2.begin(), v2.end());
     std::reverse(v2.begin(), v2.end());
     for (unsigned long i = 0; i < v.size()-1; i++) {
         v2[i] = v2[i] - v2[i+1];
@@ -40,7 +45,10 @@ int span::shortestSpan() {
     return *(std::min_element(v2.begin(), v2.end()));
 }
 
-int span::longestSpan() {
+int Span::longestSpan() {
+    if (v.empty() || v.size() == 1)
+        throw std::runtime_error("There is no spin to find");
+
     return *(std::max_element(this->v.begin(), this->v.end()))
             - *(std::min_element(this->v.begin(), this->v.end()));
 }

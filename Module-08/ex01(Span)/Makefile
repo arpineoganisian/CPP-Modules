@@ -2,7 +2,7 @@ NAME 	= span
 
 FLAGS	= -g -Wall -Werror -Wextra -std=c++98
 
-SRCS	= main.cpp span.cpp
+SRCS	= main.cpp Span.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 
