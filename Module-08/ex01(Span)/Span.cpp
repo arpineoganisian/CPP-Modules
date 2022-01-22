@@ -9,11 +9,14 @@ Span::Span() {}
 Span::Span(unsigned int n) : n(n) {}
 
 Span::Span(const Span &span) {
-    (void)span;
+    *this = span;
 }
 
 Span &Span::operator=(const Span &span) {
-    (void)span;
+    if (this != &span) {
+        this->n = span.n;
+        this->v = span.v;
+    }
     return *this;
 }
 

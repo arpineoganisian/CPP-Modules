@@ -9,7 +9,6 @@ int main() {
 
     int a = 1;
     int b = 10;
-//    int c = 0;
 
     //VECTOR
     std::vector<int> v1;
