@@ -1,5 +1,6 @@
 #include <iostream>
 #include "MutantStack.hpp"
+#include <deque>
 
 int main() {
     MutantStack<int> mstack;
